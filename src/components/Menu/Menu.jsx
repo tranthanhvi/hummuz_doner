@@ -10,21 +10,19 @@ const Menu = () => {
         variant="h3"
         sx={{ textAlign: "left", mt: "1em", mb: "0.5em" }}
       >
-        Our Menu
+        Menu
       </Typography>
       <Typography
         variant="h5"
         color={theme.palette.primary.main}
         sx={{
           textAlign: "center",
-          mt: "1em",
-          mb: "0.5em",
           textTransform: "uppercase",
         }}
       >
         Döner Meat Lovers
       </Typography>
-      <Grid container spacing={3}>
+      <Grid container spacing={4}>
         {DonerMeatballs.map((item) => (
           <Grid item xs={12} sm={6} md={4} key={item.id}>
             <Box sx={{ my: 2, display: "flex", flexDirection: "column" }}>
@@ -52,18 +50,9 @@ const Menu = () => {
               >
                 {item.name}
               </Typography>
-              <Typography variant="body2">{item.ingredients}</Typography>
-            </Box>
-          </Grid>
-        ))}
-      </Grid>
-      <Grid container spacing={3}>
-        {VegItems.map((item) => (
-          <Grid item xs={12} sm={6} md={4} key={item.id}>
-            <Box sx={{ my: 2 }}>
-              <Box component="img" src={item.image} alt={item.name} />
-              <Typography variant="h6">{item.name}</Typography>
-              <Typography variant="body2">{item.ingredients}</Typography>
+              <Typography color={theme.palette.primary.main} variant="body2">
+                {item.ingredients}
+              </Typography>
             </Box>
           </Grid>
         ))}

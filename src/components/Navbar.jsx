@@ -32,7 +32,11 @@ export const Navbar = () => {
     >
       <Container
         maxWidth="xl"
-        sx={{ display: "flex", justifyContent: "space-between" }}
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
       >
         <Box
           sx={{
@@ -43,7 +47,7 @@ export const Navbar = () => {
           }}
         >
           {" "}
-          <Box component="img" src="./img/logo.png" />
+          <Box component="img" src={`${process.env.PUBLIC_URL}/img/logo.png`} />
           <Typography variant="h6">Tripla/Hakaniemi</Typography>
         </Box>
 
@@ -73,19 +77,21 @@ export const Navbar = () => {
         >
           {pages.map((page) => (
             <Button
-              key={page}
+              key={page.name}
               sx={{
                 fontWeight: "semi-bold",
-                fontSize: "1em",
+                fontSize: "1.25em",
                 my: 2,
                 mx: 1,
-                color: theme.palette.primary.white,
-                transition: "all 0.3s ease",
+                color: theme.palette.primary.main,
+                transition: "all 0.1s ease",
+                padding: "0.25em 2em",
+                margin: "0",
+                borderBottom: "0.2rem solid transparent",
 
                 "&:hover": {
-                  backgroundColor: theme.palette.primary.main,
-                  color: theme.palette.primary.black,
-                  padding: "1em",
+                  borderColor: theme.palette.primary.white,
+                  color: theme.palette.primary.white,
                 },
               }}
             >

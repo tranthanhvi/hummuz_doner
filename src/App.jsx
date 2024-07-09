@@ -6,23 +6,28 @@ import Footer from "./components/Footer";
 import Menu from "./components/Menu/Menu";
 
 const App = () => {
-  const theme = useMuiTheme();
+  const { theme, CssBaseline, GlobalStyles } = useMuiTheme();
 
   return (
     <>
       <ThemeProvider theme={theme}>
+        <CssBaseline />
+        {GlobalStyles}
         <Navbar />
         <Container
+          maxWidth="xl"
           sx={{
-            backgroundColor: theme.palette.primary.main,
-            minHeight: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            margin: " 2em auto",
+            padding: "0",
           }}
         >
-          <Container>
-            <Menu />
-            <Footer />
-          </Container>
+          <Menu />
         </Container>
+
+        <Footer />
       </ThemeProvider>
     </>
   );

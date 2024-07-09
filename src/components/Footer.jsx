@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <Container
       sx={{
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.primary.black,
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
         justifyContent: "space-evenly",
@@ -23,8 +23,11 @@ const Footer = () => {
           mx: 1,
         }}
       >
-        <Typography variant="h5">HUMMU'Z DÖNER</Typography>
-        <Typography sx={{ my: 1 }}>Opening hours</Typography>
+        {/* <Typography variant="h5">HUMMU'Z DÖNER</Typography> */}
+        <Box component="img" src={`${process.env.PUBLIC_URL}/img/logo.png`} />
+        {/* <Typography color={theme.palette.primary.main} sx={{ my: 1 }}>
+          Opening hours
+        </Typography> */}
         <Box
           sx={{
             display: "flex",
@@ -32,21 +35,10 @@ const Footer = () => {
             alignItems: "flex-start",
           }}
         >
-          {" "}
-          <Typography
-            sx={{
-              display: "flex",
-            }}
-          >
+          <Typography variant="h6" color={theme.palette.primary.main}>
             Mon-Fri: 10.30 - 21.00
           </Typography>
-          <Typography
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-            }}
-          >
+          <Typography variant="h6" color={theme.palette.primary.main}>
             Sat-Sun: 11.30-20.00
           </Typography>
         </Box>
@@ -61,9 +53,27 @@ const Footer = () => {
           mx: 1,
         }}
       >
-        <Button variant="h6">Campaigns</Button>
-        <Button variant="h6">Menu</Button>
-        <Button variant="h6">Restaurant</Button>
+        <Button
+          sx={{
+            letterSpacing: "2px",
+          }}
+        >
+          Campaigns
+        </Button>
+        <Button
+          sx={{
+            letterSpacing: "2px",
+          }}
+        >
+          Menu
+        </Button>
+        <Button
+          sx={{
+            letterSpacing: "2px",
+          }}
+        >
+          Restaurant
+        </Button>
       </Box>
       <Box
         sx={{
@@ -75,9 +85,27 @@ const Footer = () => {
           mx: 1,
         }}
       >
-        <Button variant="h6">Feedback</Button>
-        <Button variant="h6">Franchising</Button>
-        <Button variant="h6">Contact</Button>
+        <Button
+          sx={{
+            letterSpacing: "2px",
+          }}
+        >
+          Feedback
+        </Button>
+        <Button
+          sx={{
+            letterSpacing: "2px",
+          }}
+        >
+          Franchising
+        </Button>
+        <Button
+          sx={{
+            letterSpacing: "2px",
+          }}
+        >
+          Contact
+        </Button>
       </Box>
     </Container>
   );
