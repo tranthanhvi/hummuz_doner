@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/hummuz_doner/static/js/main.3049e083.js",
+    "main.js": "/hummuz_doner/static/js/main.a0544f17.js",
     "index.html": "/hummuz_doner/index.html",
-    "main.3049e083.js.map": "/hummuz_doner/static/js/main.3049e083.js.map"
+    "main.a0544f17.js.map": "/hummuz_doner/static/js/main.a0544f17.js.map"
   },
   "entrypoints": [
-    "static/js/main.3049e083.js"
+    "static/js/main.a0544f17.js"
   ]
 }
